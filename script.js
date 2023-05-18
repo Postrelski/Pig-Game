@@ -6,14 +6,11 @@ let p2HighScore = 0;
 let p1TempScore = 0;
 let p2TempScore = 0;
 
-
 const players = document.querySelectorAll('.player')
-
 
 const endEvents = function () {
     document.querySelector('.btn--roll').removeEventListener('click', roll);
     document.querySelector('.btn--hold').removeEventListener('click', hold);
-    document.querySelector('.btn--new').removeEventListener('click', newGame);
 }
 
 const winner = function () {
@@ -48,9 +45,7 @@ const resetCurr =  function () {
     document.querySelector('#current--0').textContent = 0;
     document.querySelector('#current--1').textContent = 0;
     currScore = 0;
-    
 }
-
 
 const hold = function () {
   
@@ -68,7 +63,6 @@ const hold = function () {
     resetCurr();
     winner();
 }
-
 
 const roll = function () {
 
@@ -101,11 +95,9 @@ const roll = function () {
             document.querySelector('#current--1').textContent = currScore;
         }
         // console.log("p2 temp score: " + p2TempScore);
-
     }
     dice(randomNum);
 }
-
 
 const newGame = function () {
     resetCurr();
@@ -118,9 +110,6 @@ const newGame = function () {
     p2HighScore = 0;
     
 }
-
-
-
 
 document.querySelector('.btn--roll').addEventListener('click', roll);
 document.querySelector('.btn--hold').addEventListener('click', hold);
